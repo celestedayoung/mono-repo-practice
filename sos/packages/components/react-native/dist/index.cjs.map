@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../src/index.ts", "../src/layout/block/Block.tsx"],
+  "sourcesContent": ["/**\n * \uC81C\uC791\uD55C Component\uB97C export \uD569\uB2C8\uB2E4.\n */\nexport { Block } from './layout/block/Block';\n", "import { View, Text } from 'react-native';\n\nexport const Block = () => {\n  return (\n    <View>\n      <Text>Hello</Text>\n    </View>\n  );\n};\n"],
+  "mappings": "yaAAA,IAAAA,EAAA,GAAAC,EAAAD,EAAA,WAAAE,IAAA,eAAAC,EAAAH,GCAA,IAAAI,EAA2B,wBAEdC,EAAQ,IAEjB,oBAAC,YACC,oBAAC,YAAK,OAAK,CACb",
+  "names": ["src_exports", "__export", "Block", "__toCommonJS", "import_react_native", "Block"]
+}
