@@ -5,5 +5,9 @@
       "src": "apps/web-app/package.json",
       "use": "@vercel/next"
     }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }
