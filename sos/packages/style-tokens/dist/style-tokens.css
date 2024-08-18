@@ -1,0 +1,651 @@
+@import './index.css';
+@import 'pretendard/dist/web/static/pretendard.css';
+@import 'material-symbols';
+
+:root {
+  --background-normal-primary: #ffffff;
+  --background-normal-secondary: #f4f4f5;
+  --background-elevated-primary: #ffffff;
+  --background-elevated-secondary: #f4f4f5;
+
+  --blue-10: #fafcff;
+  --blue-50: #e5f0ff;
+  --blue-100: #cce0ff;
+  --blue-200: #99c2ff;
+  --blue-300: #66a3ff;
+  --blue-400: #3385ff;
+  --blue-500: #0066ff;
+  --blue-600: #0054d1;
+  --blue-700: #0041a3;
+  --blue-800: #002f75;
+  --blue-900: #001f4d;
+  --blue-950: #001433;
+  --blue-990: #000e24;
+
+  --blue-gray-10: #fcfcfd;
+  --blue-gray-50: #f0f2f5;
+  --blue-gray-100: #e1e5eb;
+  --blue-gray-200: #c2c9d6;
+  --blue-gray-300: #a5afc1;
+  --blue-gray-400: #8795ad;
+  --blue-gray-500: #677998;
+  --blue-gray-600: #515e76;
+  --blue-gray-700: #424e62;
+  --blue-gray-800: #303846;
+  --blue-gray-900: #1f242d;
+  --blue-gray-950: #15191f;
+  --blue-gray-990: #0e1115;
+
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  --cool-gray-10: #fcfcfd;
+  --cool-gray-50: #f1f2f4;
+  --cool-gray-100: #e3e6e9;
+  --cool-gray-200: #c7cbd1;
+  --cool-gray-300: #abb2bb;
+  --cool-gray-400: #9099a4;
+  --cool-gray-500: #737e8c;
+  --cool-gray-600: #5a626d;
+  --cool-gray-700: #4a515a;
+  --cool-gray-800: #353a41;
+  --cool-gray-900: #22252a;
+  --cool-gray-950: #171a1d;
+  --cool-gray-990: #101214;
+
+  --gray-10: #fcfcfc;
+  --gray-50: #f2f2f2;
+  --gray-100: #e6e6e6;
+  --gray-200: #cccccc;
+  --gray-300: #b3b3b3;
+  --gray-400: #9a9a9a;
+  --gray-500: #808080;
+  --gray-600: #636363;
+  --gray-700: #525252;
+  --gray-800: #3b3b3b;
+  --gray-900: #262626;
+  --gray-950: #1a1a1a;
+  --gray-990: #121212;
+
+  --green-10: #fafffc;
+  --green-50: #e5ffee;
+  --green-100: #ccffdd;
+  --green-200: #9dfbbc;
+  --green-300: #68f998;
+  --green-400: #3ef67b;
+  --green-500: #00e54d;
+  --green-600: #00c742;
+  --green-700: #009f36;
+  --green-800: #007527;
+  --green-900: #004d19;
+  --green-950: #003311;
+  --green-990: #00240c;
+
+  --opacity-black-50: rgba(0 0 0 / 0.05);
+  --opacity-black-100: rgba(0 0 0 / 0.1);
+  --opacity-black-200: rgba(0 0 0 / 0.2);
+  --opacity-black-300: rgba(0 0 0 / 0.3);
+  --opacity-black-400: rgba(0 0 0 / 0.4);
+  --opacity-black-500: rgba(0 0 0 / 0.5);
+  --opacity-black-600: rgba(0 0 0 / 0.6);
+  --opacity-black-700: rgba(0 0 0 / 0.7);
+  --opacity-black-800: rgba(0 0 0 / 0.8);
+  --opacity-black-900: rgba(0 0 0 / 0.9);
+  --opacity-black-950: rgba(0 0 0 / 0.95);
+
+  --opacity-white-50: rgba(255 255 255 / 0.05);
+  --opacity-white-100: rgba(255 255 255 / 0.1);
+  --opacity-white-200: rgba(255 255 255 / 0.2);
+  --opacity-white-300: rgba(255 255 255 / 0.3);
+  --opacity-white-400: rgba(255 255 255 / 0.4);
+  --opacity-white-500: rgba(255 255 255 / 0.5);
+  --opacity-white-600: rgba(255 255 255 / 0.6);
+  --opacity-white-700: rgba(255 255 255 / 0.7);
+  --opacity-white-800: rgba(255 255 255 / 0.8);
+  --opacity-white-900: rgba(255 255 255 / 0.9);
+  --opacity-white-950: rgba(255 255 255 / 0.95);
+
+  --orange-10: #fffcfa;
+  --orange-50: #ffefe5;
+  --orange-100: #ffdfcc;
+  --orange-200: #ffbe99;
+  --orange-300: #ff9e66;
+  --orange-400: #ff7d33;
+  --orange-500: #ff5d00;
+  --orange-600: #d14c00;
+  --orange-700: #a33c00;
+  --orange-800: #752b00;
+  --orange-900: #4d1c00;
+  --orange-950: #331300;
+  --orange-990: #240d00;
+
+  --pink-10: #fffafa;
+  --pink-50: #ffe5e8;
+  --pink-100: #ffccd1;
+  --pink-200: #ffa8b1;
+  --pink-300: #ff808c;
+  --pink-400: #ff5768;
+  --pink-500: #ff2f44;
+  --pink-600: #f50019;
+  --pink-700: #bd0013;
+  --pink-800: #85000d;
+  --pink-900: #4d0008;
+  --pink-950: #330005;
+  --pink-990: #240004;
+
+  --text-normal: #1a1a1a;
+  --text-assistive: #808080;
+  --text-alternative: #3b3b3b;
+  --text-strong: #000000;
+
+  --ui-primary-normal: #0066ff;
+  --ui-accent-normal: #ffffff;
+  --ui-state-normal: #ffffff;
+}
+
+:root {
+  --border-radius-none: 0rem;
+  --border-radius-xs: 0.125rem;
+  --border-radius-s: 0.25rem;
+  --border-radius-sm: 0.375rem;
+  --border-radius-m: 0.625rem;
+  --border-radius-ml: 0.75rem;
+  --border-radius-base: 0.5rem;
+  --border-radius-l: 1rem;
+  --border-radius-xl: 1.5rem;
+  --border-radius-2xl: 2.25rem;
+  --border-radius-round: 62.4375rem;
+}
+
+:root {
+  --shadow-xs: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  --shadow-s: 0 0 100px 0 rgba(0, 0, 0, 0.1);
+  --shadow-m: 0 0 32px 0 rgba(0, 0, 0, 0.2);
+  --shadow-l: 0 10px 100px 0 rgba(0, 0, 0, 0.3);
+  --shadow-elevated-top: 0 20px 50px 0 rgba(0, 0, 0, 0.3);
+}
+
+:root {
+  --spacing-1: 0.0625rem;
+  --spacing-2: 0.125rem;
+  --spacing-4: 0.25rem;
+  --spacing-6: 0.375rem;
+  --spacing-8: 0.5rem;
+  --spacing-10: 0.625rem;
+  --spacing-12: 0.75rem;
+  --spacing-14: 0.875rem;
+  --spacing-16: 1rem;
+  --spacing-18: 1.125rem;
+  --spacing-20: 1.25rem;
+  --spacing-24: 1.5rem;
+  --spacing-28: 1.75rem;
+  --spacing-32: 2rem;
+  --spacing-36: 2.25rem;
+  --spacing-40: 2.5rem;
+  --spacing-44: 2.75rem;
+  --spacing-48: 3rem;
+  --spacing-56: 3.5rem;
+  --spacing-64: 4rem;
+}
+
+:root {
+  --font-family-main: 'Pretendard', 'Noto Sans KR', 'Arial', 'Helvetica', 'sans-serif';
+
+  --font-size-12: 0.75rem;
+  --font-size-13: 0.8125rem;
+  --font-size-14: 0.875rem;
+  --font-size-15: 0.9375rem;
+  --font-size-16: 1rem;
+  --font-size-17: 1.0625rem;
+  --font-size-18: 1.125rem;
+  --font-size-20: 1.25rem;
+  --font-size-22: 1.375rem;
+  --font-size-24: 1.5rem;
+  --font-size-28: 1.75rem;
+  --font-size-34: 2.125rem;
+  --font-size-40: 2.5rem;
+  --font-size-60: 3.75rem;
+
+  --font-weight-400: 400;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+
+  --line-height-16: 1rem;
+  --line-height-18: 1.125rem;
+  --line-height-19: 1.1875rem;
+  --line-height-20: 1.25rem;
+  --line-height-21: 1.3125rem;
+  --line-height-22: 1.375rem;
+  --line-height-23: 1.4375rem;
+  --line-height-24: 1.5rem;
+  --line-height-25: 1.5625rem;
+  --line-height-26: 1.625rem;
+  --line-height-28: 1.75rem;
+  --line-height-30: 1.875rem;
+  --line-height-34: 2.125rem;
+  --line-height-41: 2.5625rem;
+  --line-height-48: 3rem;
+  --line-height-72: 4.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-normal-primary: #18181b;
+    --background-normal-secondary: #101014;
+    --background-elevated-primary: #2d2d34;
+    --background-elevated-secondary: #212126;
+
+    --blue-10: #001029;
+    --blue-50: #00183d;
+    --blue-100: #002357;
+    --blue-200: #003585;
+    --blue-300: #0047b2;
+    --blue-400: #005ae0;
+    --blue-500: #0f6fff;
+    --blue-600: #428eff;
+    --blue-700: #70a9ff;
+    --blue-800: #a3c8ff;
+    --blue-900: #d1e3ff;
+    --blue-950: #ebf3ff;
+    --blue-990: #fafcff;
+
+    --blue-gray-10: #111318;
+    --blue-gray-50: #191d24;
+    --blue-gray-100: #232934;
+    --blue-gray-200: #363f4f;
+    --blue-gray-300: #48556a;
+    --blue-gray-400: #57667f;
+    --blue-gray-500: #70819e;
+    --blue-gray-600: #8f9cb3;
+    --blue-gray-700: #aab4c5;
+    --blue-gray-800: #c8cfda;
+    --blue-gray-900: #e4e7ec;
+    --blue-gray-950: #f3f4f7;
+    --blue-gray-990: #fcfcfd;
+
+    --cool-gray-10: #121416;
+    --cool-gray-50: #1c1e22;
+    --cool-gray-100: #272b30;
+    --cool-gray-200: #3c4149;
+    --cool-gray-300: #505862;
+    --cool-gray-400: #606a76;
+    --cool-gray-500: #7b8693;
+    --cool-gray-600: #979faa;
+    --cool-gray-700: #b0b7bf;
+    --cool-gray-800: #cdd0d6;
+    --cool-gray-900: #e6e8ea;
+    --cool-gray-950: #f4f5f6;
+    --cool-gray-990: #fcfcfd;
+
+    --gray-10: #141414;
+    --gray-50: #1f1f1f;
+    --gray-100: #2b2b2b;
+    --gray-200: #424242;
+    --gray-300: #595959;
+    --gray-400: #6b6b6b;
+    --gray-500: #878787;
+    --gray-600: #a1a1a1;
+    --gray-700: #b8b8b8;
+    --gray-800: #d1d1d1;
+    --gray-900: #e8e8e8;
+    --gray-950: #f5f5f5;
+    --gray-990: #fcfcfc;
+
+    --green-10: #00290e;
+    --green-50: #003d14;
+    --green-100: #00571d;
+    --green-200: #00852c;
+    --green-300: #00ad3b;
+    --green-400: #00d146;
+    --green-500: #0ce956;
+    --green-600: #4cf684;
+    --green-700: #7bfaa5;
+    --green-800: #a7fbc3;
+    --green-900: #d1ffe0;
+    --green-950: #ebfff1;
+    --green-990: #fafffc;
+
+    --orange-10: #290f00;
+    --orange-50: #3d1700;
+    --orange-100: #572000;
+    --orange-200: #853000;
+    --orange-300: #b24100;
+    --orange-400: #e05200;
+    --orange-500: #ff670f;
+    --orange-600: #ff8742;
+    --orange-700: #ffa470;
+    --orange-800: #ffc5a3;
+    --orange-900: #ffe2d1;
+    --orange-950: #fff2eb;
+    --orange-990: #fffcfa;
+
+    --pink-10: #290004;
+    --pink-50: #3d0006;
+    --pink-100: #570009;
+    --pink-200: #900412;
+    --pink-300: #c70519;
+    --pink-400: #f31228;
+    --pink-500: #fa4255;
+    --pink-600: #ff6675;
+    --pink-700: #ff8a96;
+    --pink-800: #ffb2ba;
+    --pink-900: #ffd1d6;
+    --pink-950: #ffebed;
+    --pink-990: #fffafa;
+
+    --text-normal: #fcfcfc;
+    --text-assistive: #878787;
+    --text-alternative: #d1d1d1;
+    --text-strong: #ffffff;
+
+    --ui-primary-normal: #0f6fff;
+    --ui-accent-normal: #ffffff;
+    --ui-state-normal: #ffffff;
+  }
+}
+
+:root .dark {
+  --background-normal-primary: #18181b;
+  --background-normal-secondary: #101014;
+  --background-elevated-primary: #2d2d34;
+  --background-elevated-secondary: #212126;
+
+  --blue-10: #001029;
+  --blue-50: #00183d;
+  --blue-100: #002357;
+  --blue-200: #003585;
+  --blue-300: #0047b2;
+  --blue-400: #005ae0;
+  --blue-500: #0f6fff;
+  --blue-600: #428eff;
+  --blue-700: #70a9ff;
+  --blue-800: #a3c8ff;
+  --blue-900: #d1e3ff;
+  --blue-950: #ebf3ff;
+  --blue-990: #fafcff;
+
+  --blue-gray-10: #111318;
+  --blue-gray-50: #191d24;
+  --blue-gray-100: #232934;
+  --blue-gray-200: #363f4f;
+  --blue-gray-300: #48556a;
+  --blue-gray-400: #57667f;
+  --blue-gray-500: #70819e;
+  --blue-gray-600: #8f9cb3;
+  --blue-gray-700: #aab4c5;
+  --blue-gray-800: #c8cfda;
+  --blue-gray-900: #e4e7ec;
+  --blue-gray-950: #f3f4f7;
+  --blue-gray-990: #fcfcfd;
+
+  --cool-gray-10: #121416;
+  --cool-gray-50: #1c1e22;
+  --cool-gray-100: #272b30;
+  --cool-gray-200: #3c4149;
+  --cool-gray-300: #505862;
+  --cool-gray-400: #606a76;
+  --cool-gray-500: #7b8693;
+  --cool-gray-600: #979faa;
+  --cool-gray-700: #b0b7bf;
+  --cool-gray-800: #cdd0d6;
+  --cool-gray-900: #e6e8ea;
+  --cool-gray-950: #f4f5f6;
+  --cool-gray-990: #fcfcfd;
+
+  --gray-10: #141414;
+  --gray-50: #1f1f1f;
+  --gray-100: #2b2b2b;
+  --gray-200: #424242;
+  --gray-300: #595959;
+  --gray-400: #6b6b6b;
+  --gray-500: #878787;
+  --gray-600: #a1a1a1;
+  --gray-700: #b8b8b8;
+  --gray-800: #d1d1d1;
+  --gray-900: #e8e8e8;
+  --gray-950: #f5f5f5;
+  --gray-990: #fcfcfc;
+
+  --green-10: #00290e;
+  --green-50: #003d14;
+  --green-100: #00571d;
+  --green-200: #00852c;
+  --green-300: #00ad3b;
+  --green-400: #00d146;
+  --green-500: #0ce956;
+  --green-600: #4cf684;
+  --green-700: #7bfaa5;
+  --green-800: #a7fbc3;
+  --green-900: #d1ffe0;
+  --green-950: #ebfff1;
+  --green-990: #fafffc;
+
+  --orange-10: #290f00;
+  --orange-50: #3d1700;
+  --orange-100: #572000;
+  --orange-200: #853000;
+  --orange-300: #b24100;
+  --orange-400: #e05200;
+  --orange-500: #ff670f;
+  --orange-600: #ff8742;
+  --orange-700: #ffa470;
+  --orange-800: #ffc5a3;
+  --orange-900: #ffe2d1;
+  --orange-950: #fff2eb;
+  --orange-990: #fffcfa;
+
+  --pink-10: #290004;
+  --pink-50: #3d0006;
+  --pink-100: #570009;
+  --pink-200: #900412;
+  --pink-300: #c70519;
+  --pink-400: #f31228;
+  --pink-500: #fa4255;
+  --pink-600: #ff6675;
+  --pink-700: #ff8a96;
+  --pink-800: #ffb2ba;
+  --pink-900: #ffd1d6;
+  --pink-950: #ffebed;
+  --pink-990: #fffafa;
+
+  --text-normal: #fcfcfc;
+  --text-assistive: #878787;
+  --text-alternative: #d1d1d1;
+  --text-strong: #ffffff;
+
+  --ui-primary-normal: #0f6fff;
+  --ui-accent-normal: #ffffff;
+  --ui-state-normal: #ffffff;
+}
+
+.body1-regular {
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+}
+
+.body1-bold {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.375rem;
+}
+
+.body1-reading {
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+.body2-regular {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3125rem;
+}
+
+.body2-bold {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3125rem;
+}
+
+.body2-reading {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+}
+
+.body3-regular {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.body3-bold {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+.body3-reading {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+.caption-regular {
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+}
+
+.caption-bold {
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1rem;
+}
+
+.display1-regular {
+  font-size: 3.75rem;
+  font-weight: 400;
+  line-height: 4.5rem;
+}
+
+.display1-bold {
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+}
+
+.display2-regular {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+
+.display2-bold {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+}
+
+.footnote-regular {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+
+.footnote-bold {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.125rem;
+}
+
+.heading1-regular {
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+
+.heading1-bold {
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+}
+
+.heading2-regular {
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+}
+
+.heading2-bold {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5625rem;
+}
+
+.headline-regular {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.4375rem;
+}
+
+.headline-bold {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4375rem;
+}
+
+.label-regular {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.1875rem;
+}
+
+.label-bold {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.1875rem;
+}
+
+.label-reading {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+}
+
+.title1-regular {
+  font-size: 2.125rem;
+  font-weight: 400;
+  line-height: 2.5625rem;
+}
+
+.title1-bold {
+  font-size: 2.125rem;
+  font-weight: 700;
+  line-height: 2.5625rem;
+}
+
+.title2-regular {
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 2.125rem;
+}
+
+.title2-bold {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.125rem;
+}
+
+.title3-regular {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.875rem;
+}
+
+.title3-bold {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.875rem;
+}

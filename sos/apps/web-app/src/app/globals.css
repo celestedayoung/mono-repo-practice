@@ -1,0 +1,6 @@
+@import url('@sos/style-tokens/style-tokens.css');
+@import url('@sos/components-react/style/css');
+
+body {
+  background-color: var(--background-normal-secondary);
+}

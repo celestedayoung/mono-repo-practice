@@ -1,0 +1,48 @@
+{
+  "name": "@sos/components-react",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "index.js",
+  "packageManager": "yarn@4.3.1",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style/css": "./dist/index.css"
+  },
+  "scripts": {
+    "build": "yarn build:js && yarn build:type",
+    "build:dev": "yarn build:js --dev --watch & yarn build:type --watch",
+    "build:js": "node build.js",
+    "build:type": "tsc --emitDeclarationOnly",
+    "clean": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@sos/esbuild-config": "workspace:^",
+    "@sos/style-tokens": "workspace:^",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vanilla-extract/css": "^1.15.3",
+    "@vanilla-extract/esbuild-plugin": "^2.3.8",
+    "@vanilla-extract/recipes": "^0.5.3",
+    "@vanilla-extract/sprinkles": "^1.6.2",
+    "esbuild": "^0.23.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "@sos/style-tokens": "workspace:^",
+    "react": "*"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1"
+  }
+}

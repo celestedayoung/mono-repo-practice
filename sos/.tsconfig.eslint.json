@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": [
+    "packages",
+    "services",
+    "storybook/.storybook/**/*.js",
+    "storybook/**/*.tsx",
+    "storybook/**/*.ts",
+    "eslint.config.mjs",
+    "apps/web-app/src/**/*"
+  ]
+}

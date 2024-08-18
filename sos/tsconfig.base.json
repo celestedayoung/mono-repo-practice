@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    // ESNext 타겟: 최신 ECMAScript 표준을 타겟으로 컴파일
+    "target": "ESNext",
+    // 모듈 시스템 설정: 최신 ECMAScript 모듈 시스템 사용
+    "module": "ESNext",
+    // 라이브러리 설정: 컴파일할 때 사용할 라이브러리 정의 (ESNext, DOM)
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
+    // 선언 파일 생성: 타입 선언 파일 (.d.ts) 생성 여부
+    "declaration": true,
+    // 엄격한 타입 검사: 타입스크립트의 엄격한 타입 검사 기능 활성화
+    "strict": true,
+    // 모듈 해석 방식: bundler 스타일로 모듈 해석
+    "moduleResolution": "bundler",
+    // JSX 변환 방식: React 17 이상의 JSX 변환 방식 사용
+    "jsx": "react-jsx",
+  }
+}

@@ -1,0 +1,22 @@
+export declare const spacing: {
+    1: string;
+    2: string;
+    4: string;
+    6: string;
+    8: string;
+    10: string;
+    12: string;
+    14: string;
+    16: string;
+    18: string;
+    20: string;
+    24: string;
+    28: string;
+    32: string;
+    36: string;
+    40: string;
+    44: string;
+    48: string;
+    56: string;
+    64: string;
+};

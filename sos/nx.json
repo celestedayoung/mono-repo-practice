@@ -1,0 +1,44 @@
+{
+  "extends": "nx/presets/npm.json",
+  "affected": {
+    "defaultBase": "main"
+  },
+  "workspaceLayout": {
+    "appDir": "apps",
+    "libDir": "packages"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["build"]
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"]
+    }
+  },
+  "projects": {
+    "storybook": {
+      "root": "storybook",
+      "sourceRoot": "storybook/src",
+      "projectType": "application",
+      "targets": {
+        "storybook": {
+          "executor": "nx:run-commands",
+          "options": {
+            "command": "yarn storybook"
+          }
+        },
+        "build-storybook": {
+          "executor": "nx:run-commands",
+          "options": {
+            "command": "yarn build-storybook"
+          }
+        }
+      }
+    }
+  }
+}

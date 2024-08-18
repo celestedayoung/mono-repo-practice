@@ -1,0 +1,48 @@
+{
+  "name": "sos-frontend",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "apps/**/*",
+    "packages/**/*"
+  ],
+  "scripts": {
+    "dev": "nx dev",
+    "dev:storybook": "yarn storybook & yarn build:dev @sos/components-react & yarn build:dev @sos/style-tokens",
+    "dev:next": "yarn dev @sos/web-app & yarn build:dev @sos/components-react",
+    "graph": "nx run-many --target=build --graph",
+    "build": "nx build",
+    "build:all": "nx run-many --target=build --all",
+    "build:dev": "nx build:dev",
+    "clean": "nx clean",
+    "clean:all": "nx run-many --target=clean --all",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "nx storybook @sos/storybook"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "packageManager": "yarn@4.3.1",
+  "devDependencies": {
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.7.0",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "@typescript-eslint/parser": "^7.17.0",
+    "eslint": "^9.7.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-json-format": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-storybook": "^0.8.0",
+    "globals": "^15.8.0",
+    "nx": "19.5.2",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  }
+}
