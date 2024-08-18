@@ -14,9 +14,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <head>
-        <base href="/" />
-      </head>
       <body>
         <RQProvicer>{children}</RQProvicer>
       </body>
