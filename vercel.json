@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "sos/package.json",
-      "use": "@vercel/node"
+      "src": "apps/web-app/package.json",
+      "use": "@vercel/next"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/sos/$1"
+      "dest": "/apps/web-app/$1"
     }
   ]
 }
