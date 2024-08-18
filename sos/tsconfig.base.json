@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
     // ESNext 타겟: 최신 ECMAScript 표준을 타겟으로 컴파일
     "target": "ESNext",
     // 모듈 시스템 설정: 최신 ECMAScript 모듈 시스템 사용
