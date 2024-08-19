@@ -264,7 +264,23 @@ export default function BasicMap() {
       // marker가 모든 OperatingTimeData 속성을 포함하는지 확인
       return getTodayOperatingTime(marker as OperatingTimeData);
     }
-    return 'N/A'; // OperatingTimeData가 아닌 경우의 기본 반환 값
+    return '9:00-23:00'; // OperatingTimeData가 아닌 경우의 기본 반환 값
+  };
+
+  // Badge 색상 결정
+  const getBadgeColor = () => {
+    switch (selectedChip) {
+      case '제세동기':
+        return 'pink';
+      case '민방위대피소':
+        return 'green';
+      case '지진(옥외)대피소':
+        return 'orange';
+      case '지진/해일대피소':
+        return 'blue';
+      default:
+        return 'gray';
+    }
   };
 
   return (
@@ -442,6 +458,7 @@ export default function BasicMap() {
               },
             ]}
             badgeText={selectedChip}
+            badgeColor={getBadgeColor()}
             subText={
               selectedMarker ? ` ${selectedMarker.gugun} ${selectedMarker.detailAddress}` : '-'
             }
