@@ -8,11 +8,7 @@
   ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/$1" }
-  ],
-  {
-  "redirects": [
-    { "source": "/", "destination": "/server/app/index.html", "permanent": true }
+    { "src": "/(.*)", "dest": "/$1" },
+    { "src": "/", "dest": "/index.html" }  // 루트 경로를 명시적으로 지정
   ]
-
 }
