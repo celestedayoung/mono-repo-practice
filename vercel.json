@@ -11,12 +11,11 @@
       "handle": "filesystem"
     },
     {
-      "src": "/_next/static/(.*)",
-      "dest": "/_next/static/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ]
+  ],
+  "rewrites": [
+    {"source": "/(.*)", "destination": "/"}
+]
 }
