@@ -279,7 +279,7 @@ export default function BasicMap() {
       case '지진/해일대피소':
         return 'blue';
       default:
-        return 'gray';
+        return 'blue';
     }
   };
 
