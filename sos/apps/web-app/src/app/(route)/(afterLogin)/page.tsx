@@ -107,7 +107,7 @@ export default function Home() {
           temperature={weatherInfo?.temp ?? '-'}
           highestTemperature={weatherInfo?.maxTemp ?? '-'}
           lowestTemperature={weatherInfo?.minTemp ?? '-'}
-          iconSrc={weatherInfo?.icon ?? '-'}
+          iconSrc="/test.png"
           windSpeed={weatherInfo?.windSpeed ?? '-'}
           condition=""
           date={new Date().toLocaleDateString('ko-KR', {
