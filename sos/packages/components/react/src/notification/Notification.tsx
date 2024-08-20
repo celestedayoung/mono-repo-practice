@@ -36,7 +36,9 @@ export const Notification = forwardRef<HTMLDivElement, NotificationProps>(
         {...props}
       >
         <Icon color={textColor}>{icon}</Icon>
-        <Text color={textColor}>{content}</Text>
+        <Text textType="body3" color={textColor}>
+          {content}
+        </Text>
       </Container>
     );
   },
