@@ -33,27 +33,33 @@ export default function BasicMap() {
   const clustererRef = useRef<kakao.maps.MarkerClusterer | null>(null);
   const markersRef = useRef<kakao.maps.Marker[]>([]);
 
+  // useEffect(() => {
+  //   setIsClient(true);
+  //   if (navigator.geolocation) {
+  //     const watchId = navigator.geolocation.watchPosition(
+  //       (position) => {
+  //         setLat(position.coords.latitude);
+  //         setLon(position.coords.longitude);
+  //       },
+  //       (error) => {
+  //         console.log('❌ Fail to load geolocation', error.message);
+  //         setLat(37.5665);
+  //         setLon(126.978);
+  //       },
+  //     );
+  //     return () => {
+  //       navigator.geolocation.clearWatch(watchId);
+  //     };
+  //   } else {
+  //     setLat(37.5665);
+  //     setLon(126.978);
+  //   }
+  // }, []);
+
   useEffect(() => {
     setIsClient(true);
-    if (navigator.geolocation) {
-      const watchId = navigator.geolocation.watchPosition(
-        (position) => {
-          setLat(position.coords.latitude);
-          setLon(position.coords.longitude);
-        },
-        (error) => {
-          console.log('❌ Fail to load geolocation', error.message);
-          setLat(37.5665);
-          setLon(126.978);
-        },
-      );
-      return () => {
-        navigator.geolocation.clearWatch(watchId);
-      };
-    } else {
-      setLat(37.5665);
-      setLon(126.978);
-    }
+    setLat(37.501285);
+    setLon(127.03960166666667);
   }, []);
 
   const {
