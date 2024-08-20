@@ -91,7 +91,9 @@ export default function Home() {
     .sort((a, b) => new Date(b.sendTime).getTime() - new Date(a.sendTime).getTime())[0];
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
+    <div
+      style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', overflowY: 'auto' }}
+    >
       {latestCriticalResponse && (
         <Container paddingX={16} paddingY={12}>
           <Notification
@@ -107,14 +109,13 @@ export default function Home() {
           lowestTemperature={weatherInfo?.minTemp ?? '-'}
           iconSrc={weatherInfo?.icon ?? '-'}
           windSpeed={weatherInfo?.windSpeed ?? '-'}
-          condition="test"
           date={new Date().toLocaleDateString('ko-KR', {
             year: 'numeric',
             month: 'long',
             day: 'numeric',
             weekday: 'long',
           })}
-          location="test"
+          location="서울특별시 강남구"
         />
       </Container>
       <Container display="flex" flexDirection="column" paddingY={16}>
@@ -125,11 +126,17 @@ export default function Home() {
           {followingMembers.map((member, index) => (
             <InfoButton
               key={index}
-              variant={alertLevels[member.nickName]}
+              variant={
+                member.nickName === '엄마'
+                  ? 'danger'
+                  : member.nickName === '동생'
+                    ? 'warning'
+                    : 'default'
+              }
               badgeText={
-                alertLevels[member.nickName] === 'danger'
+                member.nickName === '엄마'
                   ? '위급재난'
-                  : alertLevels[member.nickName] === 'warning'
+                  : member.nickName === '동생'
                     ? '긴급재난'
                     : ''
               }
@@ -153,24 +160,14 @@ export default function Home() {
           ))}
         </Container>
       </Container>
-      <Container
-        display="flex"
-        flexDirection="column"
-        paddingY={16}
-        style={{ flexGrow: 1, overflow: 'hidden' }}
-      >
+      <Container display="flex" flexDirection="column" paddingY={16}>
         <Container display="flex" justifyContent="space-between">
           <Headline>재난 문자</Headline>
           <Link href={'/emergency-alert'} onClick={(e) => handleLinkClick(e, '/emergency-alert')}>
             <MoreButton />
           </Link>
         </Container>
-        <Container
-          style={{
-            flexGrow: 1,
-            overflowY: 'auto',
-          }}
-        >
+        <Container>
           <Container display="flex" flexDirection="column" paddingX={16} paddingY={8} gap={8}>
             {disasterResponses.map((response) => (
               <MessageList
