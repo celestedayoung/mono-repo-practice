@@ -60,7 +60,7 @@ export const WeatherBox = forwardRef<HTMLElement, WeatherBoxProps>(
       >
         {/* 날짜, 현재 위치 */}
         <Container display="flex" justifyContent="space-between">
-          <Text textType="headline" color="textAlternative">
+          <Text textType="body2" color="textAlternative">
             {date}
           </Text>
           <Container display="flex" alignItems="center" gap={4}>
