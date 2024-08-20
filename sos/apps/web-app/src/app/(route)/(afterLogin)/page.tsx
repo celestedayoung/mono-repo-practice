@@ -109,6 +109,7 @@ export default function Home() {
           lowestTemperature={weatherInfo?.minTemp ?? '-'}
           iconSrc={weatherInfo?.icon ?? '-'}
           windSpeed={weatherInfo?.windSpeed ?? '-'}
+          condition=""
           date={new Date().toLocaleDateString('ko-KR', {
             year: 'numeric',
             month: 'long',
