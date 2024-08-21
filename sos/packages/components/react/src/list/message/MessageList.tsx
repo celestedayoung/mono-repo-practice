@@ -13,7 +13,7 @@ interface MessageListProps extends Omit<CommonProps, 'color'> {
   content: string;
   isRead: boolean;
   isChecked: boolean;
-  following: string;
+  following?: string;
   variant: 'default' | 'danger' | 'warning';
   mode: 'default' | 'round';
 }
