@@ -176,7 +176,7 @@ export default function Home() {
                 mode="round"
                 isRead={true}
                 isChecked={false}
-                following={response.mine ? '' : response.followName
+                following={response.mine ? '' : response.followName}
                 variant={
                   response.level === '위급재난'
                     ? 'danger'
