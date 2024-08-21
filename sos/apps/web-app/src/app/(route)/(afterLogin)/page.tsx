@@ -105,8 +105,8 @@ export default function Home() {
       <Container paddingX={16}>
         <WeatherBox
           temperature={weatherInfo?.temp ?? '-'}
-          highestTemperature={weatherInfo?.maxTemp ?? '-'}
-          lowestTemperature={weatherInfo?.minTemp ?? '-'}
+          highestTemperature="30"
+          lowestTemperature="28"
           iconSrc="/rainy.png"
           windSpeed={weatherInfo?.windSpeed ?? '-'}
           condition=""
