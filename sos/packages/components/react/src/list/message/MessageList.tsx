@@ -13,7 +13,7 @@ interface MessageListProps extends Omit<CommonProps, 'color'> {
   content: string;
   isRead: boolean;
   isChecked: boolean;
-  following?: string | undefined;
+  following?: string;
   variant: 'default' | 'danger' | 'warning';
   mode: 'default' | 'round';
 }
@@ -85,7 +85,7 @@ export const MessageList = forwardRef<HTMLElement, MessageListProps>(
                   {title}
                 </Text>
               )}
-              <Badge color={color}>{following}</Badge>
+              {following && <Badge color={color}>{following}</Badge>}
               {isChecked && (
                 <Icon size={20} color={`${color}500`}>
                   verified
