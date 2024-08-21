@@ -98,7 +98,7 @@ export default function Home() {
         <Container paddingX={16} paddingY={12}>
           <Notification
             state={latestCriticalResponse.level === '위급재난' ? 'danger' : 'warning'}
-            content={`[${latestCriticalResponse.classification}] ${latestCriticalResponse.locationName}: 행동강령 확인`}
+            content={`[태풍] ${latestCriticalResponse.locationName}: 행동강령 확인`}
           />
         </Container>
       )}
